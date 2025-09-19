@@ -1,5 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 18-09-2025
+## Date: 19-09-2025
 
 
 ## AIM
@@ -20,11 +20,38 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
+admin.py
 
+from django.contrib import admin
+from .models import Car
+
+@admin.register(Car)
+class CarAdmin(admin.ModelAdmin):
+    list_display = ('car_id', 'brand', 'model', 'year', 'price')
+    search_fields = ('brand', 'model')
+    list_filter = ('year', 'brand')
+
+
+models.py
+
+from django.db import models
+
+class Car(models.Model):
+    car_id = models.AutoField(primary_key=True)
+    brand = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)
+    year = models.IntegerField()
+    price = models.FloatField()
+
+    def __str__(self):
+        return f"{self.brand} {self.model} ({self.year})"
+
+```
 
 ## OUTPUT
 
-
+![alt text](<Screenshot (35).png>)
 
 
 ## RESULT

@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import Student
+from .models import Car
 
-admin.site.register(Student)
+@admin.register(Car)
+class CarAdmin(admin.ModelAdmin):
+    list_display = ('car_id', 'brand', 'model', 'year', 'price')
+    search_fields = ('brand', 'model')
+    list_filter = ('year', 'brand')

@@ -1,9 +1,11 @@
 from django.db import models
 
-class Student(models.Model):
-    name = models.CharField(max_length=100)
-    roll_no = models.IntegerField()
-    course = models.CharField(max_length=50)
+class Car(models.Model):
+    car_id = models.AutoField(primary_key=True)
+    brand = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)
+    year = models.IntegerField()
+    price = models.FloatField()
 
     def __str__(self):
-        return self.name
+        return f"{self.brand} {self.model} ({self.year})"
