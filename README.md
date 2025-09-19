@@ -21,35 +21,10 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 
-```
-admin.py
-
-
-from django.contrib import admin
-from .models import Student
-
-admin.site.register(Student)
-
-models.py
-
-
-from django.db import models
-
-class Student(models.Model):
-    name = models.CharField(max_length=100)
-    roll_no = models.IntegerField()
-    course = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-
-```
-
 
 ## OUTPUT
 
-![alt text](<Screenshot (33).png>)
+
 
 
 ## RESULT
