@@ -5,6 +5,10 @@
 ## AIM
 To develop a Django application to store and retrieve data from Car Inventory Database using Object Relational Mapping(ORM).
 
+## ER DIAGRAM
+
+![WhatsApp Image 2025-09-22 at 8 38 19 AM](https://github.com/user-attachments/assets/e147b85c-1404-49ef-ac2f-a05b366060fb)
+
 ## DESIGN STEPS
 
 ### STEP 1:
